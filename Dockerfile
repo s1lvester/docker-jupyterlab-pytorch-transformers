@@ -28,6 +28,9 @@ RUN mamba update -y -n base --all && \
     mamba clean --all -f -y
 
 RUN pip3 install --no-cache-dir \
-    polars
+    polars \
+    sentencepiece \
+    accelerate \
+    bitsandbytes
 
 WORKDIR "${HOME}"
